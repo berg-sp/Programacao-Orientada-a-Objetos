@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class Main {
+    // Escreva um programa 
+    // Requisitos:
+    // O programa deve solicita ao usuário o número de alunos.
+    // Para cada aluno, o programa deve
+    // O programa deve calcular a média das notas de cada aluno.
+    // O programa deve exibir a média de cada aluno;
+    // O programa deve informar se o aluno for aprovado caso a média seja maior ou igual a 5 ou reprovado se menor que 5.
+    private static final Scanner SCAN = new Scanner(System.in);
+    private static final int DISCIPLINAS = 3;
+    public static void main(String[] args) {
+        final int quantidadeAlunos = receberQuantidadeAlunos();
+        int[][] alunos = new int[quantidadeAlunos][DISCIPLINAS];
+        solicitarNotasDosAlunos(alunos, quantidadeAlunos);
+        apresentarNotasDosAlunosComStatus(alunos, quantidadeAlunos);
+    }
+    public static int receberQuantidadeAlunos(){
+        System.out.println("Digite a quantidade de alunos: ");
+        return Integer.parseInt(SCAN.nextLine());
+    }
+    public static void solicitarNotasDosAlunos(int[][] alunos, int quantidadeAlunos){
+        for(int i = 0; i < quantidadeAlunos; i++){
+            System.out.println("Aluno: " + (i + 1));
+            for(int j = 0; j < DISCIPLINAS; j++){
+                System.out.println("Digite a nota da " + (j + 1) + "ª disciplina: ");
+                alunos[i][j] = Integer.parseInt(SCAN.nextLine());
+            }
+            System.out.println("\n");
+        }
+    }
+    public static void apresentarNotasDosAlunosComStatus(int[][] alunos, int quantidadeAlunos){
+        for (int i = 0; i < quantidadeAlunos; i++){
+            System.out.println("Aluno: " + (i + 1));
+            double somaDasNotas = 0.0;
+            for(int j = 0; j < DISCIPLINAS; j++){
+                somaDasNotas = somaDasNotas + alunos[i][j];
+            }
+            double media = Math.round(somaDasNotas / DISCIPLINAS);
+            boolean foiAprovado = media >= 5 ? true : false;
+            System.out.print("Média: " + media + " Status: ");
+            if (foiAprovado) {
+                System.out.println("APROVADO");
+            }else {
+                System.out.println("REPROVADO");
+            }
+            System.out.println("\n");
+        }
+    }
+    /*static final int CONSTANTE = 0;
+    public static void main(String[] args) throws Exception {
+        int numero = 0;
+        double numeroDecimal = 0.5;
+        String nome = "Berg";
+        char caracter = 'a';
+        boolean verdadeiro = true;
+    }*/
+}

@@ -1,5 +1,5 @@
 # Módulo 2 - Programação Orientada a Objeto
-
+ 
 Neste módulo iremos estudar o paradigma de programação orientada a objetos. Nosso roadmap para esse módulo será:
 
 1. Conhecendo o Java.
@@ -17,4 +17,4 @@ Neste módulo iremos estudar o paradigma de programação orientada a objetos. N
 13. Revisão de POO.
 14. Teste.
 15. Artefatos em Java.
-16. Gradle (Gerenciamento de dependências).  
+16. Gradle (Gerenciamento de dependências).

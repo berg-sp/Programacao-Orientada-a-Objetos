@@ -1,0 +1,38 @@
+Considerando a mesma classe música do exercício anterior, crie uma classe chamada Playlist. A classe playlist deve conter:
+
+Uma lista de músicas como atributo
+Um construtor vazio e construtor que receba a lista de músicas
+getters e setters
+Um método para adicionar uma música à playlist
+Um método que receba um tempo em segundos e que retorne todas as músicas menores que esse tempo em segundos
+Na Main você deve criar uma playlist, adicionar 5 músicas a ela e, por fim, invocar o método que retorna as músicas maiores que o tempo em segundos.
+Imprima o nome de todas as músicas que forem maiores que o tempo em segundos passado como parâmetro.
+
+Exemplo de entrada:
+1
+Thriller
+354
+true
+2
+Hey Jude
+421
+false
+3
+Bohemian Rhapsody
+357
+false
+4
+Skyline Pidgeon
+210
+true
+5
+Smooth Criminal
+412
+true
+355
+
+Saída esperada:
+Hey Jude
+Bohemian Rhapsody
+Smooth Criminal
+

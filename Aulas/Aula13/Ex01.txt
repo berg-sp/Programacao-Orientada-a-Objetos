@@ -1,0 +1,80 @@
+Dada a classe Música abaixo, crie um programa que contenha uma lista de 5 músicas.
+Seu programa deve ter um laço de repetição que percorra todas as músicas e imprima o nome daquelas que estiverem favoritadas.
+
+Exemplo de entrada:
+1
+Thriller
+354
+true
+2
+Hey Jude
+421
+false
+3
+Bohemian Rhapsody
+357
+false
+4
+Skyline Pidgeon
+210
+true
+5
+Smooth Criminal
+412
+true
+
+Saída esperada:
+Thriller
+Skyline Pidgeon
+Smooth Criminal
+
+Classe Música:
+
+ public class Musica {
+    private int id;
+    private String titulo;
+    private int duracaoEmSegundos;
+    private boolean estaFavoritada;
+
+    public Musica() {
+    }
+
+    public Musica(int id, String titulo, int duracaoEmSegundos, boolean estaFavoritada) {
+        this.id = id;
+        this.titulo = titulo;
+        this.duracaoEmSegundos = duracaoEmSegundos;
+        this.estaFavoritada = estaFavoritada;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public int getDuracaoEmSegundos() {
+        return duracaoEmSegundos;
+    }
+
+    public void setDuracaoEmSegundos(int duracaoEmSegundos) {
+        this.duracaoEmSegundos = duracaoEmSegundos;
+    }
+
+    public boolean isEstaFavoritada() {
+        return estaFavoritada;
+    }
+
+    public void setEstaFavoritada(boolean estaFavoritada) {
+        this.estaFavoritada = estaFavoritada;
+    }
+}
